@@ -22,9 +22,19 @@ namespace Supercell.Magic.Logic.Data
             this.m_iconLayer2 = LogicDataTables.GetAllianceBadgeLayerByName(this.GetValue("IconLayer2", 0), this);
         }
 
-        public LogicAllianceBadgeLayerData GetIconLayer()
+        public LogicAllianceBadgeLayerData GetIconLayer0()
         {
-            return this.m_iconLayer0 + this.m_iconLayer1 + this.m_iconLayer2;
+            return this.m_iconLayer0;
+        }
+
+        public LogicAllianceBadgeLayerData GetIconLayer1()
+        {
+            return this.m_iconLayer1;
+        }
+
+        public LogicAllianceBadgeLayerData GetIconLayer2()
+        {
+            return this.m_iconLayer2;
         }
     }
 }
