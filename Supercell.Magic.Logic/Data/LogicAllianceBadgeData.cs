@@ -4,9 +4,9 @@ namespace Supercell.Magic.Logic.Data
 
     public class LogicAllianceBadgeData : LogicData
     {
-        private string m_iconLayer0;
-        private string m_iconLayer1;
-        private string m_iconLayer2;
+        private LogicAllianceBadgeLayerData m_iconLayer0;
+        private LogicAllianceBadgeLayerData m_iconLayer1;
+        private LogicAllianceBadgeLayerData m_iconLayer2;
 
         public LogicAllianceBadgeData(CSVRow row, LogicDataTable table) : base(row, table)
         {
