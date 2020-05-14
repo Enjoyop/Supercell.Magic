@@ -120,7 +120,7 @@ namespace Supercell.Magic.Logic.Data
 
         public bool IsOfferedByCalendar()
         {
-            return this.m_offeredByCalendar
+            return this.m_offeredByCalendar;
         }
     }
 }
