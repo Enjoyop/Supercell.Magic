@@ -9,6 +9,7 @@ namespace Supercell.Magic.Logic.Data
 
         private int m_width;
         private int m_height;
+        private int m_villageType;
 
         public LogicAlliancePortalData(CSVRow row, LogicDataTable table) : base(row, table)
         {
@@ -23,6 +24,7 @@ namespace Supercell.Magic.Logic.Data
             this.m_exportName = this.GetValue("ExportName", 0);
             this.m_width = this.GetIntegerValue("Width", 0);
             this.m_height = this.GetIntegerValue("Height", 0);
+            this.m_villageType = this.GetIntegerVlaue("VillageType", 0);
         }
 
         public int GetWidth()
@@ -33,6 +35,11 @@ namespace Supercell.Magic.Logic.Data
         public int GetHeight()
         {
             return this.m_height;
+        }
+
+        public int GetVillageType()
+        {
+            return this.m_villageType;
         }
     }
 }
