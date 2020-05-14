@@ -20,6 +20,7 @@ namespace Supercell.Magic.Logic.Data
         private bool m_red;
         private bool m_kunlunOnly;
         private bool m_isOfferPackage;
+        private bool m_offeredByCalendar;
 
         public LogicBillingPackageData(CSVRow row, LogicDataTable table) : base(row, table)
         {
@@ -44,6 +45,7 @@ namespace Supercell.Magic.Logic.Data
             this.m_lenovoID = this.GetIntegerValue("LenovoID", 0);
             this.m_tencentID = this.GetValue("TencentID", 0);
             this.m_isOfferPackage = this.GetBooleanValue("isOfferPackage", 0);
+            this.m_offeredByCalendar = this.GetBooleanValue("OfferedByCalendar", 0);
         }
 
         public bool Disabled()
@@ -114,6 +116,11 @@ namespace Supercell.Magic.Logic.Data
         public bool IsOfferPackage()
         {
             return this.m_isOfferPackage;
+        }
+
+        public bool IsOfferedByCalendar()
+        {
+            return this.m_offeredByCalendar
         }
     }
 }
