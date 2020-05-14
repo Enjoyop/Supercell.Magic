@@ -24,7 +24,7 @@ namespace Supercell.Magic.Logic.Data
             this.m_exportName = this.GetValue("ExportName", 0);
             this.m_width = this.GetIntegerValue("Width", 0);
             this.m_height = this.GetIntegerValue("Height", 0);
-            this.m_villageType = this.GetIntegerVlaue("VillageType", 0);
+            this.m_villageType = this.GetIntegerValue("VillageType", 0);
         }
 
         public int GetWidth()
