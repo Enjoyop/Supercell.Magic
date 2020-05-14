@@ -362,7 +362,7 @@
             return (LogicNpcData) LogicDataTables.m_tables[(int) LogicDataType.NPC].GetDataByName(name, data);
         }
 
-        publi  static LogicAllianceBadgeLayerData GetAllianceBadgeLayerData(string name, Logic data)
+        public static LogicAllianceBadgeLayerData GetAllianceBadgeLayerData(string name, Logic data)
         {
             return (LogicAllianceBadgeLayerData) LogicDataTables.m_tables[(int) LogicDataType.ALLIANCE_BADGE_LAYER].GetDataByName(name, data);
         }
