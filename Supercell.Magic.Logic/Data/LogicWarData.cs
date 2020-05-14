@@ -9,6 +9,7 @@ namespace Supercell.Magic.Logic.Data
         private int m_warMinutes;
 
         private bool m_disableProduction;
+        private bool m_allowArrangedWar;
 
         public LogicWarData(CSVRow row, LogicDataTable table) : base(row, table)
         {
@@ -23,6 +24,7 @@ namespace Supercell.Magic.Logic.Data
             this.m_preparationMinutes = this.GetIntegerValue("PreparationMinutes", 0);
             this.m_warMinutes = this.GetIntegerValue("WarMinutes", 0);
             this.m_disableProduction = this.GetBooleanValue("DisableProduction", 0);
+            this.m_allowArrangedWar = thid.GetBooleanValue("AllowArrangedWar", 0);
         }
 
         public int GetTeamSize()
@@ -43,6 +45,11 @@ namespace Supercell.Magic.Logic.Data
         public bool IsDisableProduction()
         {
             return this.m_disableProduction;
+        }
+
+        public bool IsAllowArrangedWar()
+        {
+            return this.m_allowArrangedWar;
         }
     }
 }
