@@ -24,7 +24,7 @@ namespace Supercell.Magic.Logic.Data
             this.m_preparationMinutes = this.GetIntegerValue("PreparationMinutes", 0);
             this.m_warMinutes = this.GetIntegerValue("WarMinutes", 0);
             this.m_disableProduction = this.GetBooleanValue("DisableProduction", 0);
-            this.m_allowArrangedWar = thid.GetBooleanValue("AllowArrangedWar", 0);
+            this.m_allowArrangedWar = this.GetBooleanValue("AllowArrangedWar", 0);
         }
 
         public int GetTeamSize()
