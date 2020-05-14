@@ -11,6 +11,7 @@ namespace Supercell.Magic.Logic.Data
         private bool m_canBuy;
         private bool m_shopCategoryResource;
         private bool m_shopCategoryArmy;
+        private bool m_shopCategoryDefense;
 
         public LogicBuildingClassData(CSVRow row, LogicDataTable table) : base(row, table)
         {
@@ -24,6 +25,7 @@ namespace Supercell.Magic.Logic.Data
             this.m_canBuy = this.GetBooleanValue("CanBuy", 0);
             this.m_shopCategoryResource = this.GetBooleanValue("ShopCategoryResource", 0);
             this.m_shopCategoryArmy = this.GetBooleanValue("ShopCategoryArmy", 0);
+            this.m_shopCategoryDefense = this.GetBooleanValue("ShopCategoryDefense", 0);
 
             this.m_workerClass = string.Equals("Worker", this.GetName());
 
