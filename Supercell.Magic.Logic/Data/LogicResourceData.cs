@@ -38,7 +38,7 @@ namespace Supercell.Magic.Logic.Data
             this.m_collectEffect = LogicDataTables.GetEffectByName(this.GetValue("CollectEffect", 0), this);
 
             this.m_resourceIconExportName = this.GetValue("ResourceIconExportName", 0);
-            this.m_stealLimitMid = this.GetIntegerValue("StealLimitMid", 0), this);
+            this.m_stealLimitMid = this.GetIntegerValue("StealLimitMid", 0);
             this.m_stealEffectMid = LogicDataTables.GetEffectByName(this.GetValue("StealEffectMid", 0), this);
             this.m_stealLimitBig = this.GetIntegerValue("StealLimitBig", 0);
             this.m_stealEffectBig = LogicDataTables.GetEffectByName(this.GetValue("StealEffectBig", 0), this);
