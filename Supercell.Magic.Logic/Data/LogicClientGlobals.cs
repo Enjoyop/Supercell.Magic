@@ -70,7 +70,7 @@ using Supercell.Magic.Titan.CSV;
             return this.GetGlobalData(name).GetNumberValue();
         }
 
-        private String GetStrValue(string name)
+        private string GetStrValue(string name)
         {
             return this.GetGlobalData(name).GetTextValue();
         }
