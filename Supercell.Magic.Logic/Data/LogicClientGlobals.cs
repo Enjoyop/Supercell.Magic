@@ -9,20 +9,21 @@ using Supercell.Magic.Titan.CSV;
         private int row18;
         private int row19;
         private int row27;
+        private int row28;
 
-        private String row1;
-        private String row2;
-        private String row3;
-        private String row4;
-        private String row5;
-        private String row6;
-        private String row7;
-        private String row8;
-        private String row9;
-        private String row10;
-        private String row11;
-        private String row14;
-        private String row15;
+        private string row1;
+        private string row2;
+        private string row3;
+        private string row4;
+        private string row5;
+        private string row6;
+        private string row7;
+        private string row8;
+        private string row9;
+        private string row10;
+        private string row11;
+        private string row14;
+        private string row15;
 
         private bool row20;
         private bool row21;
@@ -62,6 +63,7 @@ using Supercell.Magic.Titan.CSV;
             this.row25 = this.GetBoolValue("DROID_SANS_FALLBACK_ON_LOW_MEM_DEVICES");
             this.row26 = this.GetBoolValue("GOOGLE_SERVICE_ACHIEVEMENTS_BUTTON");
             this.row27 = this.GetIntValue("ASH_CNT");
+            this.row28 = this.GetIntValue("ASH_CNT_LOW");
             this.m_pepperEnabled = this.GetBoolValue("USE_PEPPER_CRYPTO");
             this.m_powerSaveModeLessEndTurnMessages = this.GetBoolValue("POWER_SAVE_MODE_LESS_ENDTURN_MESSAGES");
         }
@@ -194,6 +196,11 @@ using Supercell.Magic.Titan.CSV;
         public int AshCount()
         {
             return this.row27;
+        }
+
+        public int AshCountLow()
+        {
+            return this.row28;
         }
 
         public bool PepperEnabled()
