@@ -8,6 +8,7 @@ using Supercell.Magic.Titan.CSV;
         private int row17;
         private int row18;
         private int row19;
+        private int row27;
 
         private String row1;
         private String row2;
@@ -22,6 +23,11 @@ using Supercell.Magic.Titan.CSV;
         private String row11;
         private String row14;
         private String row15;
+
+        private bool row20;
+        private bool row21;
+        private bool row25;
+        private bool row26;
 
         private bool m_pepperEnabled;
         private bool m_powerSaveModeLessEndTurnMessages;
@@ -51,6 +57,11 @@ using Supercell.Magic.Titan.CSV;
             this.row17 = 3600 * this.GetIntValue("COME_BACK_NOTIFICATION_DELAY_HOURS_SMALL");
             this.row18 = 3600 * this.GetIntValue("COME_BACK_NOTIFICATION_DELAY_HOURS_MEDIUM");
             this.row19 = 3600 * this.GetIntValue("COME_BACK_NOTIFICATION_DELAY_HOURS_LARGE");
+            this.row20 = this.GetBoolValue("GAMECENTER_REAUTHORIZE");
+            this.row21 = this.GetBoolValue("BILLING_PACK_NAMES_FROM_CSV");
+            this.row25 = this.GetBoolValue("DROID_SANS_FALLBACK_ON_LOW_MEM_DEVICES");
+            this.row26 = this.GetBoolValue("GOOGLE_SERVICE_ACHIEVEMENTS_BUTTON");
+            this.row27 = this.GetIntValue("ASH_CNT");
             this.m_pepperEnabled = this.GetBoolValue("USE_PEPPER_CRYPTO");
             this.m_powerSaveModeLessEndTurnMessages = this.GetBoolValue("POWER_SAVE_MODE_LESS_ENDTURN_MESSAGES");
         }
@@ -168,6 +179,21 @@ using Supercell.Magic.Titan.CSV;
         public bool BillingPackNamesFromCsv()
         {
             return this.row21;
+        }
+
+        public bool DroidSansFallbackOnLowMemDevices()
+        {
+            return this.row25;
+        }
+
+        public bool GoogleServiceAchievementsButton()
+        {
+            return this.row26;
+        }
+
+        public int AshCount()
+        {
+            return this.row27;
         }
 
         public bool PepperEnabled()
