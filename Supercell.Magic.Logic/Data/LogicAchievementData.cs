@@ -1,9 +1,9 @@
+using Supercell.Magic.Titan.CSV;
+using Supercell.Magic.Titan.Debug;
+using Supercell.Magic.Titan.Util;
+
 namespace Supercell.Magic.Logic.Data
 {
-    using Supercell.Magic.Titan.CSV;
-    using Supercell.Magic.Titan.Debug;
-    using Supercell.Magic.Titan.Util;
-
     public class LogicAchievementData : LogicData
     {
         public const int ACTION_TYPE_NPC_STARS = 0;
@@ -24,6 +24,13 @@ namespace Supercell.Magic.Logic.Data
         public const int ACTION_TYPE_VERSUS_BATTLE_TROPHIES = 17;
         public const int ACTION_TYPE_GEAR_UP = 18;
         public const int ACTION_TYPE_REPAIR_BUILDING = 19;
+        public const int ACTION_TYPE_CLAN_GAMES_POINTS = 20;
+        public const int ACTION_TYPE_DRAGON_LAYER = 21;
+        public const int ACTION_TYPE_LEAGUE_WAR_STARS = 22;
+        public const int ACTION_TYPE_SUPERCELLID_BOUND = 23;
+        public const int ACTION_TYPE_SEASON_CHALLENGE_POINTS = 24;
+        public const int ACTION_TYPE_ACTIVATE_SUPER_LICENCE = 25;
+        public const int ACTION_TYPE_DONATE_SIEGES = 26;
 
         private bool m_showValue;
 
@@ -31,9 +38,11 @@ namespace Supercell.Magic.Logic.Data
         private int m_diamondReward;
         private int m_expReward;
         private int m_actionCount;
+        private int m_actionDataLevel;
         private int m_level;
         private int m_levelCount;
         private int m_villageType;
+        private int m_uiPriority;
 
         private string m_completedTID;
         private string m_androidId;
@@ -56,12 +65,14 @@ namespace Supercell.Magic.Logic.Data
             this.m_diamondReward = this.GetIntegerValue("DiamondReward", 0);
             this.m_expReward = this.GetIntegerValue("ExpReward", 0);
             this.m_actionCount = this.GetIntegerValue("ActionCount", 0);
+            this.m_actionDataLevel = this.GetIntegerValue("ActionDataLevel",0);
             this.m_level = this.GetIntegerValue("Level", 0);
             this.m_levelCount = this.GetIntegerValue("LevelCount", 0);
 
             this.m_completedTID = this.GetValue("CompletedTID", 0);
             this.m_showValue = this.GetBooleanValue("ShowValue", 0);
             this.m_androidId = this.GetValue("AndroidID", 0);
+            this.m_uiPriority = this.GetValue("UIPriority",0);
 
             if (this.m_actionCount == 0)
             {
@@ -161,6 +172,27 @@ namespace Supercell.Magic.Logic.Data
                     }
 
                     break;
+                case "clan_games_points":
+                    this.m_actionType = LogicAchievementData.ACTION_TYPE_CLAN_GAMES_POINTS;
+                    break;
+                case "dragon_slayer":
+                    this.m_actionType = LogicAchievementData.ACTION_TYPE_DRAGON_LAYER;
+                    break;
+                case "league_war_stars":
+                    this.m_actionType = LogicAchievementData.ACTION_TYPE_LEAGUE_WAR_STARS;
+                    break;
+                case "scid_bound":
+                    this.m_actionType = LogicAchievementData.ACTION_TYPE_SUPERCELLID_BOUND;
+                    break;
+                case "season_challenge_points":
+                    this.m_actionType = LogicAchievementData.ACTION_TYPE_SEASON_CHALLENGE_POINTS;
+                    break;
+                case "activate_super_licence":
+                    this.m_actionType = LogicAchievementData.ACTION_TYPE_ACTIVATE_SUPER_LICENCE;
+                    break;
+                case "donate_sieges":
+                    this.m_actionType = LogicAchievementData.ACTION_TYPE_DONATE_SIEGES;
+                    break;
                 default:
                     Debugger.Error(string.Format("Unknown Action in achievements {0}", action));
                     break;
@@ -216,9 +248,19 @@ namespace Supercell.Magic.Logic.Data
             return this.m_actionCount;
         }
 
+        public int GetActionDataLevel()
+        {
+            return this.m_actionDataLevel;
+        }
+
         public int GetLevel()
         {
             return this.m_level;
+        }
+
+        public int GetUIPriority()
+        {
+            return this.m_uiPriority;
         }
 
         public string GetCompletedTID()
