@@ -1,9 +1,9 @@
+using Supercell.Magic.Titan.CSV;
+using Supercell.Magic.Titan.Debug;
+using Supercell.Magic.Titan.Util;
+
 namespace Supercell.Magic.Logic.Data
 {
-    using Supercell.Magic.Titan.CSV;
-    using Supercell.Magic.Titan.Debug;
-    using Supercell.Magic.Titan.Util;
-
     public class LogicAchievementData : LogicData
     {
         public const int ACTION_TYPE_NPC_STARS = 0;
