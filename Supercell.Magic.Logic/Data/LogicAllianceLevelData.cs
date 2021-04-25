@@ -10,6 +10,7 @@ namespace Supercell.Magic.Logic.Data
 
         private int m_troopRequestCooldown;
         private int m_troopDonationLimit;
+        private int m_spellDonationLimit;
         private int m_troopDonationRefund;
         private int m_troopDonationUpgrade;
         private int m_warLootCapacityPercent;
@@ -55,6 +56,16 @@ namespace Supercell.Magic.Logic.Data
                 }
             }
 
+            this.m_spellDonationLimit = this.GetIntegerValue("SpellDonationLimit", 0);
+            
+            if (previousLevel != null)
+            {
+                if (this.m_spellDonationLimit == 0)
+                {
+                    this.m_spellDonationLimit = previousLevel.m_spellDonationLimit;
+                }
+            }
+  
             this.m_troopDonationRefund = this.GetIntegerValue("TroopDonationRefund", 0);
 
             if (previousLevel != null)
@@ -124,6 +135,11 @@ namespace Supercell.Magic.Logic.Data
         public int GetTroopDonationLimit()
         {
             return this.m_troopDonationLimit;
+        }
+
+        public int GetSpellDonationLimit()
+        {
+            return this.m_spellDonationLimit;
         }
 
         public int GetTroopDonationRefund()
