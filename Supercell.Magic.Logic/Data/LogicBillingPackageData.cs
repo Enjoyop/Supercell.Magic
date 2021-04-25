@@ -17,10 +17,13 @@ namespace Supercell.Magic.Logic.Data
         private bool m_disabled;
         private bool m_existsApple;
         private bool m_existsAndroid;
+        private bool m_existsAmazon;
         private bool m_red;
         private bool m_kunlunOnly;
         private bool m_isOfferPackage;
         private bool m_offeredByCalendar;
+        private bool m_giftCard;
+        private bool m_supercellIdStore;
 
         public LogicBillingPackageData(CSVRow row, LogicDataTable table) : base(row, table)
         {
@@ -34,6 +37,7 @@ namespace Supercell.Magic.Logic.Data
             this.m_disabled = this.GetBooleanValue("Disabled", 0);
             this.m_existsApple = this.GetBooleanValue("ExistsApple", 0);
             this.m_existsAndroid = this.GetBooleanValue("ExistsAndroid", 0);
+            this.m_existsAmazon = this.GetBooleanValue("ExistsAmazon", 0);
             this.m_diamonds = this.GetIntegerValue("Diamonds", 0);
             this.m_usd = this.GetIntegerValue("USD", 0);
             this.m_shopItemExportName = this.GetValue("ShopItemExportName", 0);
@@ -46,6 +50,8 @@ namespace Supercell.Magic.Logic.Data
             this.m_tencentID = this.GetValue("TencentID", 0);
             this.m_isOfferPackage = this.GetBooleanValue("isOfferPackage", 0);
             this.m_offeredByCalendar = this.GetBooleanValue("OfferedByCalendar", 0);
+            this.m_giftCard = this.GetBooleanValue("GiftCard", 0);
+            this.m_supercellIdStore = this.GetBooleanValue("SCIDStore", 0);
         }
 
         public bool Disabled()
@@ -61,6 +67,11 @@ namespace Supercell.Magic.Logic.Data
         public bool ExistsAndroid()
         {
             return this.m_existsAndroid;
+        }
+
+        public bool ExistsAmazon()
+        {
+            return this.m_existsAmazon;
         }
 
         public int GetDiamonds()
@@ -121,6 +132,16 @@ namespace Supercell.Magic.Logic.Data
         public bool IsOfferedByCalendar()
         {
             return this.m_offeredByCalendar;
+        }
+
+        public bool IsGiftCard()
+        {
+            return this.m_giftCard;
+        }
+
+        public boolean IsSupercellIdStore()
+        {
+            return this.m_supercellIdStore;
         }
     }
 }
