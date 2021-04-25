@@ -188,6 +188,10 @@
         BOOMBOX = 40,
         EVENT_ENTRY = 41,
         DEEPLINK = 42,
-        LEAGUE_VILLAGE2 = 43
+        LEAGUE_VILLAGE2 = 43,
+        TASK = 44,
+        BOOSTER = 45,
+        SKIN = 51,
+        PASS_TASK = 52
     }
 }
