@@ -8,6 +8,7 @@ namespace Supercell.Magic.Logic.Data
         private bool m_enabledLowMemory;
         private bool m_preLoading;
         private bool m_preLoadingLowMemory;
+        private bool m_forYouEnabled;
 
         private string[] m_disabledDevices;
         private string[] m_supportedPlatforms;
@@ -28,6 +29,7 @@ namespace Supercell.Magic.Logic.Data
             this.m_enabledLowMemory = this.GetBooleanValue("EnabledLowMem", 0);
             this.m_preLoading = this.GetBooleanValue("PreLoading", 0);
             this.m_preLoadingLowMemory = this.GetBooleanValue("PreLoadingLowMem", 0);
+            this.m_forYouEnabled = this.GetBooleanValue("ForYouEnabled", 0);
 
             this.m_disabledDevices = new string[this.GetArraySize("DisabledDevices")];
 
