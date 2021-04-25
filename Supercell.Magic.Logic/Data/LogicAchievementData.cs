@@ -28,6 +28,9 @@ namespace Supercell.Magic.Logic.Data
         public const int ACTION_TYPE_DRAGON_SLAYER = 21;
         public const int ACTION_TYPE_LEAGUE_WAR_STARS = 22;
         public const int ACTION_TYPE_SUPERCELLID_BOUND = 23;
+        public const int ACTION_TYPE_SEASON_CHALLENGE_POINTS = 24;
+        public const int ACTION_TYPE_ACTIVATE_SUPER_LICENCE = 25;
+        public const int ACTION_TYPE_DONATE_SIEGES = 26;
 
         private bool m_showValue;
 
@@ -180,6 +183,15 @@ namespace Supercell.Magic.Logic.Data
                     break;
                 case "scid_bound":
                     this.m_actionType = LogicAchievementData.ACTION_TYPE_SUPERCELLID_BOUND;
+                    break;
+                case "season_challenge_points":
+                    this.m_actionType = LogicAchievementData.ACTION_TYPE_SEASON_CHALLENGE_POINTS;
+                    break;
+                case "activate_super_licence":
+                    this.m_actionType = LogicAchievementData.ACTION_TYPE_ACTIVATE_SUPER_LICENCE;
+                    break;
+                case "donate_sieges":
+                    this.m_actionType = LogicAchievementData.ACTION_TYPE_DONATE_SIEGES;
                     break;
                 default:
                     Debugger.Error(string.Format("Unknown Action in achievements {0}", action));
