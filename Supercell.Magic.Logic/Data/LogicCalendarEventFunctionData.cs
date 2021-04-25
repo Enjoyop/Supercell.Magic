@@ -28,6 +28,14 @@ namespace Supercell.Magic.Logic.Data
         public const int FUNCTION_TYPE_BUILDING_DESTROYED_SPAWN_UNIT = 21;
         public const int FUNCTION_TYPE_USE_SPELL = 22;
         public const int FUNCTION_TYPE_CLAN_WAR_LOOT_MULTIPLIER = 23;
+        public const int FUNCTION_TYPE_USE_TROOP_GIVE_BOOSTER = 24;
+        public const int FUNCTION_TYPE_USE_SPELL_GIVE_BOOSTER = 25;
+        public const int FUNCTION_TYPE_TROOP_TRAINING_TIME = 26;
+        public const int FUNCTION_TYPE_SPELL_BREWING_TIME = 27;
+        public const int FUNCTION_TYPE_TROOP_TRAINING_TIME_ALL = 28;
+        public const int FUNCTION_TYPE_SPELL_BREWING_TIME_ALL = 29;
+        public const int FUNCTION_TYPE_HERO_HEAL_TIME = 30;
+
 
         public const int PARAMETER_TYPE_BOOLEAN = 0;
         public const int PARAMETER_TYPE_INT = 1;
@@ -40,6 +48,7 @@ namespace Supercell.Magic.Logic.Data
         public const int PARAMETER_TYPE_BILLING_PACKAGE = 8;
         public const int PARAMETER_TYPE_ANIMATION = 9;
         public const int PARAMETER_TYPE_HERO = 10;
+        public const int PARAMETER_TYPE_BOOSTER = 11;
 
         private bool m_targetingSupported;
         private bool m_deprecated;
@@ -161,6 +170,20 @@ namespace Supercell.Magic.Logic.Data
                     return LogicCalendarEventFunctionData.FUNCTION_TYPE_USE_SPELL;
                 case "ClanWarLootMultiplier":
                     return LogicCalendarEventFunctionData.FUNCTION_TYPE_CLAN_WAR_LOOT_MULTIPLIER;
+                case "UseTroopGiveBooster":
+                    return LogicCalendarEventFunctionData.FUNCTION_TYPE_USE_TROOP_GIVE_BOOSTER;
+                case "UseSpellGiveBooster":
+                    return LogicCalendarEventFunctionData.FUNCTION_TYPE_USE_SPELL_GIVE_BOOSTER;
+                case "TroopTrainingTime":
+                    return LogicCalendarEventFunctionData.FUNCTION_TYPE_TROOP_TRAINING_TIME;
+                case "SpellBrewingTime":
+                    return LogicCalendarEventFunctionData.FUNCTION_TYPE_SPELL_BREWING_TIME;
+                case "TroopTrainingTimeAll":
+                    return LogicCalendarEventFunctionData.FUNCTION_TYPE_TROOP_TRAINING_TIME_ALL;
+                case "SpellBrewingTimeAll":
+                    return LogicCalendarEventFunctionData.FUNCTION_TYPE_SPELL_BREWING_TIME_ALL;
+                case "HeroHealTime":
+                    return LogicCalendarEventFunctionData.FUNCTION_TYPE_HERO_HEAL_TIME;
                 default:
                     Debugger.Error("Unknown function. " + name);
                     return -1;
@@ -193,6 +216,8 @@ namespace Supercell.Magic.Logic.Data
                     return LogicCalendarEventFunctionData.PARAMETER_TYPE_ANIMATION;
                 case "hero":
                     return LogicCalendarEventFunctionData.PARAMETER_TYPE_HERO;
+                case "booster":
+                    return LogicCalendarEventFunctionData.PARAMETER_TYPE_BOOSTER;
                 default:
                     Debugger.Error("Unknown parameter type " + name);
                     return -1;
