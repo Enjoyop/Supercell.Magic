@@ -1,3 +1,7 @@
+## NOTE
+This is not a project I intend to complete and it is not officially owned by me.
+I'm taking notes for the future, maybe someday ...
+
 ## Supercell.Magic - Project
 ***Supercell.Magic*** is a Clash of Clans Server.
 It was written by myself.
