@@ -12,6 +12,7 @@ namespace Supercell.Magic.Logic.Data
         private bool m_shopCategoryResource;
         private bool m_shopCategoryArmy;
         private bool m_shopCategoryDefense;
+        private bool m_npc;
         
         private LogicBuildingClassData m_parentClass;
 
@@ -28,6 +29,7 @@ namespace Supercell.Magic.Logic.Data
             this.m_shopCategoryResource = this.GetBooleanValue("ShopCategoryResource", 0);
             this.m_shopCategoryArmy = this.GetBooleanValue("ShopCategoryArmy", 0);
             this.m_shopCategoryDefense = this.GetBooleanValue("ShopCategoryDefense", 0);
+            this.m_npc = this.GetBooleanValue("Npc", 0);
             this.m_parentClass = LogicDataTables.GetBuildingClassByName(this.GetValue("ParentClass", 0), this);
 
             this.m_workerClass = string.Equals("Worker", this.GetName());
