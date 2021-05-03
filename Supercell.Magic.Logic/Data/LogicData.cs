@@ -191,6 +191,7 @@
         LEAGUE_VILLAGE2 = 43,
         TASK = 44,
         BOOSTER = 45,
+        TRADER = 46,
         SKIN = 51,
         PASS_TASK = 52
     }
