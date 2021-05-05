@@ -193,6 +193,7 @@
         BOOSTER = 45,
         TRADER = 46,
         SKIN = 51,
-        PASS_TASK = 52
+        PASS_TASK = 52,
+        VILLAGE_BACKGROUND = 59
     }
 }
