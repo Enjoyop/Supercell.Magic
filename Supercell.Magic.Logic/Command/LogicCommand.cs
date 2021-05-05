@@ -194,6 +194,13 @@
         ACCOUNT_BOUND = 603,
         SEEN_BUILDER_MENU = 604,
         CHALLENGE_FRIEND_CANCEL = 605,
+        
+        //14.0.4 command
+        SELL_MAGIC_ITEMS = 613,
+        BUY_TRADER_ITEM = 615,
+        TRADER_DAILY_DISCOUTS = 616,
+        UPGRADE_TOWNHALL_WEAPON = 623,
+        
         PLACE_ATTACKER = 700,
         PLACE_ALLIANCE_PORTAL = 701,
         END_ATTACK_PREPARATION = 702,
